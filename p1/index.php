@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang='en'>
-<head><title>Practice Application</title>
+<head><title>Project 1</title>
 	<meta charset='utf-8'>
 </head> 
 <body>
