@@ -4,6 +4,7 @@
 	<meta charset='utf-8'>
 </head> 
 <body>     
-	<h1>Practice Application!</h1>
+	<h1>Practice Application</h1>
+	<img src='/images/hes-logo.png' alt="HES Logo">
 </body>
 </html>
