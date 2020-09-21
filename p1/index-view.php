@@ -14,8 +14,8 @@
 
      <h3>Results:</h3>
      <ul>
-        <li>Dice 1 rolled </li>
-        <li>Dice 2 rolled </li>
-        <li>x is the winner! </li>
+        <li>Dice 1 rolled x </li>
+        <li>Dice 2 rolled y</li>
+        <li>Dice (1/2) is the winner! or It's a Tie!</li>
 </body>
 </html>
