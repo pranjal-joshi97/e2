@@ -5,7 +5,7 @@
 $penny_value = .01; #double (float)
 $nickel_value = .05;
 $dime_value = .10;
-$quarter_value = .25
+$quarter_value = .25; 
 $halfdollar_value = .50;
 
 # Define 4 more variables, which will each
