@@ -27,14 +27,14 @@
    </ul>
 
    <h2>Rounds</h2>
-   Player 1 dice rounds:
+   Player 1:
    <ul>
       <?php foreach ($player1Results as $key => $value) { ?>
       <li><?php echo $value; ?>
       </li>
       <?php } ?>
    </ul>
-   Player 2 dice rounds:
+   Player 2:
    <ul>
       <?php foreach ($player2Results as $key => $value) { ?>
       <li><?php echo $value; ?>
