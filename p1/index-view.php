@@ -19,22 +19,22 @@
    <h2>Results:</h2>
    <ul>
       <li>Player 1 rolled <?php echo(count($player1Results));?>
-         times.</li>
+         rounds.</li>
       <li>Player 2 rolled <?php echo(count($player2Results));?>
-         times.</li>
+         rounds.</li>
       <li>Winner: <?php echo($finalResult);?>
       </li>
    </ul>
 
    <h2>Rounds</h2>
-   Player 1 dice rolls:
+   Player 1 dice rounds:
    <ul>
       <?php foreach ($player1Results as $key => $value) { ?>
       <li><?php echo $value; ?>
       </li>
       <?php } ?>
    </ul>
-   Player 2 dice rolls:
+   Player 2 dice rounds:
    <ul>
       <?php foreach ($player2Results as $key => $value) { ?>
       <li><?php echo $value; ?>

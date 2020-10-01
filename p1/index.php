@@ -1,6 +1,6 @@
 <?php
 
-# Sets the 'winner' limit to 5
+# Sets the 'winner' limit to 6
 $answer = 6;
 
 $player1Rolls = null;
