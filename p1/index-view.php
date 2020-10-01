@@ -11,7 +11,7 @@
    <h2>Mechanics:</h2>
    <ul>
       <li>Player 1 and Player 2 each throw a dice until either player rolls a 6.</li>
-      <li>Whoever rolls a 6 in the least rounds wins!</li>
+      <li>Whoever rolls a 6 first (in the least rounds) wins!</li>
       <li>If both the players' roll a 6 within the same rounds, it's a tie!</li>
    </ul>
 
