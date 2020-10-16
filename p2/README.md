@@ -3,9 +3,8 @@
 + Production URL: <http://e2p2.pranjaljoshi.me>
 
 ## Outside resources
-+ Story Inspiration: <https://www.madtakes.com/libs/034.html>
-+ isset(): <https://stackoverflow.com/questions/4261133/notice-undefined-variable-notice-undefined-index-and-notice-undefined>
-           <https://www.php.net/manual/en/function.isset.php>
++ Radio button, trying out the default selected/checked property: <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio>
+           
 
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
++ n/a
