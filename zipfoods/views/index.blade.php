@@ -5,7 +5,8 @@ All Products
 @endsection
 
 @section('content')
-<h2>All products</h2>
+<h2>All Products</h2>
+
 <div id='product-index'>
     @foreach($products as $product)
     <a href='/product?id={{ $product["id"] }}'>
