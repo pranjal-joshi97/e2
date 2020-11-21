@@ -1,21 +1,20 @@
-@extends('templates.master')
+  @extends('templates.master')
 
-@section('title')
-All Products
-@endsection
+  @section('title')
+  {{ $app->config('app.name') }}
+  @endsection
 
-@section('content')
-<h2>All Products</h2>
+  @section('content')
 
-<div id='product-index'>
-    @foreach($products as $product)
-    <a href='/product?id={{ $product["id"] }}'>
-        <div class='product'>
-            <div class='product-name'>{{ $product['name'] }}</div>
-            <img class='product-thumb' src="/images/products/{{ $product['id'] }}.jpg">
-        </div>
-    </a>
-    @endforeach
-</div>
+  <h2>Welcome!</h2>
 
-@endsection
+  <p>
+      {{ $app->config('app.name') }} is your one-stop-shop for convenient online grocery shopping in the greater Boston
+      area.
+  </p>
+
+  <p>
+      <a href='/products'>Check out our selection of products...</a>
+  </p>
+
+  @endsection
