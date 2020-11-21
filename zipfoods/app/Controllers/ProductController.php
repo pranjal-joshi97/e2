@@ -14,4 +14,19 @@ class ProductController extends Controller
             'products' => $products->getAll()
         ]);
     }
+
+    public function show()
+    {
+        $id = $this->app->param('id');
+
+        $product = $this->products->getById($id);
+
+        if (is_null($product)) {
+            return $this->app->view('errors.404');
+        }
+
+        return $this->app->view('products.show', [
+        'product' => $product
+    ]);
+    }
 }

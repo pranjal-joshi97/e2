@@ -8,4 +8,5 @@ return [
     '/contact' => ['AppController', 'contact'],
     '/about' => ['AppController', 'about'],
     '/products' => ['ProductController', 'index'],
+    '/product' => ['ProductController', 'show'],
 ];
