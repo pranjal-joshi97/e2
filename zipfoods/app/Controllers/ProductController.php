@@ -10,7 +10,7 @@ class ProductController extends Controller
 
     public function __construct($app)
     {
-        parent::__constructs($app);
+        parent::__construct($app);
         $this->products = new Products($this->app->path('database/products.json'));
     }
     public function index()
