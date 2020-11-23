@@ -1,31 +1,31 @@
 <?php
-
 namespace App\Controllers;
-
-use App\Products;
 
 class ProductController extends Controller
 {
-    private $products;
-
+    /**
+     *
+     */
     public function __construct($app)
     {
         parent::__construct($app);
-        $this->products = new Products($this->app->path('database/products.json'));
     }
+
+    /**
+     * GET "/products"
+     * Show all products
+     */
     public function index()
     {
-        $products = new Products($this->app->path('database/products.json'));
-
         return $this->app->view('products.index', [
-            'products' => $this->products->getAll()
+            'products' => $this->app->db()->all('products')
         ]);
     }
 
     /**
-         * GET "/product?id=x"
-         * Show an individual product
-         */
+     * GET "/product?id=x"
+     * Show an individual product
+     */
     public function show()
     {
         $id = $this->app->param('id');
@@ -48,20 +48,19 @@ class ProductController extends Controller
 
         # If the user submitted the review form, we'll have a confirmation name
         # that we'll pass to the view to show them a confirmation message
-        // $confirmationName = $this->app->old('confirmationName');
+        $confirmationName = $this->app->old('confirmationName');
 
-        // return $this->app->view('products.show', [
-        //     'product' => $product,
-        //     'confirmationName' => $confirmationName,
-        //     'reviews' => $reviews
-        // ]);
+        return $this->app->view('products.show', [
+            'product' => $product,
+            'confirmationName' => $confirmationName,
+            'reviews' => $reviews
+        ]);
     }
 
     /**
      * POST "/products/save-review"
      * Process the review form from the product page
      */
-
     public function saveReview()
     {
         $this->app->validate([
