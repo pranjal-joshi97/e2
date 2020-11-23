@@ -47,7 +47,7 @@ class ProductController extends Controller
 
         return $this->app->view('products.show', [
             'product' => $product,
-            'name' => $name
+            'name' => $name,
         ]);
     }
 
@@ -55,7 +55,7 @@ class ProductController extends Controller
     {
         $this->app->validate([
             'name' => 'required',
-            'review' => 'required|minLength:200',
+            'content' => 'required|minLength:200',
         ]);
 
         # If the above validation fails, the user is redirected back to the product page
@@ -63,7 +63,7 @@ class ProductController extends Controller
         
         # Extract data from the form submission
         $name = $this->app->input('name');
-        $review = $this->app->input('review');
+        $content = $this->app->input('content');
         $id = $this->app->input('id');
 
         $this->app->redirect('/product?id='.$id, ['name' => $name]);
