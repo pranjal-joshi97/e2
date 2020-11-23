@@ -48,13 +48,13 @@ class ProductController extends Controller
 
         # If the user submitted the review form, we'll have a confirmation name
         # that we'll pass to the view to show them a confirmation message
-        $confirmationName = $this->app->old('confirmationName');
+        // $confirmationName = $this->app->old('confirmationName');
 
-        return $this->app->view('products.show', [
-            'product' => $product,
-            'confirmationName' => $confirmationName,
-            'reviews' => $reviews
-        ]);
+        // return $this->app->view('products.show', [
+        //     'product' => $product,
+        //     'confirmationName' => $confirmationName,
+        //     'reviews' => $reviews
+        // ]);
     }
 
     /**
