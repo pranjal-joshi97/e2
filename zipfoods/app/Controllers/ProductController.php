@@ -43,11 +43,11 @@ class ProductController extends Controller
             return $this->app->view('products.missing', ['id' => $id]);
         }
 
-        $name = $this->app->old('name');
+        $confirmationName = $this->app->old('confirmationName');
 
         return $this->app->view('products.show', [
             'product' => $product,
-            'name' => $name,
+            'confirmationName' => $confirmationName,
         ]);
     }
 
@@ -66,6 +66,6 @@ class ProductController extends Controller
         $content = $this->app->input('content');
         $id = $this->app->input('id');
 
-        $this->app->redirect('/product?id='.$id, ['name' => $name]);
+        $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
     }
 }
