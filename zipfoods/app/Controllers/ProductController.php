@@ -1,31 +1,31 @@
 <?php
+
 namespace App\Controllers;
+
+use App\Products;
 
 class ProductController extends Controller
 {
-    /**
-     *
-     */
+    private $products;
+
     public function __construct($app)
     {
         parent::__construct($app);
+        $this->products = new Products($this->app->path('database/products.json'));
     }
-
-    /**
-     * GET "/products"
-     * Show all products
-     */
     public function index()
     {
+        $products = new Products($this->app->path('database/products.json'));
+
         return $this->app->view('products.index', [
-            'products' => $this->app->db()->all('products')
+            'products' => $this->products->getAll()
         ]);
     }
 
     /**
-     * GET "/product?id=x"
-     * Show an individual product
-     */
+         * GET "/product?id=x"
+         * Show an individual product
+         */
     public function show()
     {
         $id = $this->app->param('id');
@@ -36,31 +36,21 @@ class ProductController extends Controller
         }
         
         # Load the product details
-        $product = $this->app->db()->findById('products', $id);
+        $product = $this->products->getById($id);
 
         # If we couldn't find the product, return the "product missing" view
         if (is_null($product)) {
             return $this->app->view('products.missing', ['id' => $id]);
         }
 
-        # Load the review details
-        $reviews = $this->app->db()->findByColumn('reviews', 'product_id', '=', $id);
-
-        # If the user submitted the review form, we'll have a confirmation name
-        # that we'll pass to the view to show them a confirmation message
-        $confirmationName = $this->app->old('confirmationName');
+        $name = $this->app->old('name');
 
         return $this->app->view('products.show', [
             'product' => $product,
-            'confirmationName' => $confirmationName,
-            'reviews' => $reviews
+            'name' => $name
         ]);
     }
 
-    /**
-     * POST "/products/save-review"
-     * Process the review form from the product page
-     */
     public function saveReview()
     {
         $this->app->validate([
@@ -75,18 +65,7 @@ class ProductController extends Controller
         $name = $this->app->input('name');
         $content = $this->app->input('content');
         $id = $this->app->input('id');
-        
-        # Insert into the database
-        $data = [
-            'name' => $name,
-            'content' => $content,
-            'product_id' => $id
-        ];
 
-        $this->app->db()->insert('reviews', $data);
-
-        # Send the user back to the product page with a `confirmationName`
-        # we'll use to display a confirmation message.
-        $this->app->redirect('/product?id='.$id, ['confirmationName' => $name]);
+        $this->app->redirect('/product?id='.$id, ['name' => $name]);
     }
 }
