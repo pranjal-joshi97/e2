@@ -5,6 +5,20 @@
 @endsection
 
 @section('content')
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@elseif($confirmationName)
+<div class='alert alert-success'>
+    Thank you for your review, {{ $confirmationName }}!
+</div>
+@endif
+
+
+
 <div id='product-show'>
     <h2>{{ $product['name'] }}</h2>
 
@@ -33,6 +47,16 @@
     <button type='submit' class='btn btn-primary'>Submit Review</button>
 </form>
 
+<h3>Reviews</h3>
+@if($reviews)
+@foreach($reviews as $review)
+<div class='review'>
+    <span class='review-name'>{{ $review['name'] }}</span>
+    <p>{{ $review['content'] }}</p>
+</div>
+@endforeach
+@else
+<div>No reviews yet.</div>
 
 <a href='/products'>&larr; Return to all products</a>
 @endsection
