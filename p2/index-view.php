@@ -32,7 +32,7 @@
         </li>
         <li>Computer played: <?php echo $computerThrow ?>
         </li>
-        <li>Winner: <?php echo $finalResult ?>
+        <li>Result: <?php echo $finalResult ?>
         </li>
     </ul>
 

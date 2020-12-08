@@ -18,7 +18,7 @@ if ($computerThrow == 0) {
 
 # Compare user and computer moves
 if ($computerThrow == $choice) {
-    $finalResult = "Tie";
+    $finalResult = "It's a tie";
 } elseif ($computerThrow == 'Rock' && $choice == 'Paper') {
     $finalResult = "You win :)";
 } elseif ($computerThrow == 'Scissors' && $choice == 'Paper') {

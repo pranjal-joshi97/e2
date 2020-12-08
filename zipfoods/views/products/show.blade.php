@@ -59,6 +59,8 @@
 @endforeach
 @else
 <div>No reviews yet.</div>
+@endif
+
 
 <a href='/products'>&larr; Return to all products</a>
 @endsection
