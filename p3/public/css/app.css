@@ -1,3 +1,119 @@
 #logo {
     width:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{  
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #26006e;
+    color: white;
+}
+
+h1{
+    color: #e540c8;
+    display: flex;
+    justify-content: center;
+}
+
+#retro{
+    color: #00dfba;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    margin-left: 6px;
+}
+
+#card{
+    background-color: rgb(255, 255, 255, 0.6); 
+    display: block;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    color:#c6f8fe;
+    margin: 5px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    color: #26006e;
+    font-size: 18px;
+}
+
+#rock{
+    color: #ff1dd6;
+    font-weight: bold;
+}
+
+#paper{
+    color: #00ffd5;
+    font-weight: bold;
+}
+
+#scissors{
+    color: #0080ff;
+    font-weight: bold;
+}
+
+p{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.titles{
+  color: #26006e;  
+}
+.results{
+  color: white;  
+}
+
+button{
+    margin-left: 40px;
+    margin-top: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #26006e;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 7px;
+}
+
+button:hover{
+    color: #26006e;
+    background-color: white;
+}
+
+.error{
+    display: flex;
+    justify-content: center;
+    color: rgb(177, 25, 25);
+    font-weight: bold;
+}
+
+.page-nav {
+    margin-top: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #26006e;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.page-nav:hover{
+    color: #26006e;
+    background-color: white;
 }

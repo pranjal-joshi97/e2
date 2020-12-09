@@ -16,6 +16,7 @@ class AppCommand extends Command
         # primary key column so you don’t have to include that in your array of columns.
         $this->app->db()->createTable('rounds', [
         'move' => 'varchar(255)',
+        'computer' => 'varchar(255)',
         'result' => 'varchar(255)',
         'time' => 'timestamp',
         ]);
@@ -29,11 +30,11 @@ class AppCommand extends Command
         # Use a loop to create 10 past rounds
         for ($i = 0; $i < 10; $i++) {
             $moves = ['Rock', 'Paper', 'Scissors'];
-            $computerThrow = array_rand($moves);
+            $computer = array_rand($moves);
 
             # Set up a round
             $round = [
-                'move' => $moves[$computerThrow],
+                'move' => $moves[$computer],
                 'result' => rand(0, 2),
                 'time' => $faker->dateTimeThisMonth()->format('Y-m-d H:i:s')
             ];

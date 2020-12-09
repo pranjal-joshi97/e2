@@ -63,6 +63,7 @@ class AppController extends Controller
         
         $data = [
         'move' => $move,
+        'computer' => $computer,
         'result' => $result,
         'time' => date('Y-m-d H:i:s'),
         ];

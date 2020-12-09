@@ -6,11 +6,14 @@ Round Details
 @endsection
 
 @section('content')
-<h2>Round Details</h2>
+<div id="card">
+    <a href='/' class="page-nav">Homepage</a>
+    <h2>Round Details</h2>
+    <p><b class="titles">You played:</b> <b class="results">{{ $round['move'] }}</b></p>
+    <p><b class="titles">Computer played:</b> <b class="results">{{ $round['computer'] }}</b></p>
+    <p><b class="titles">Result:</b> <b class="results">{{ $round['result'] }}</b></p>
+    <p><b class="titles">Time:</b> <b class="results">{{ $round['time'] }}</b></p>
 
-<p>You played: {{ $round['move'] }}</p>
-<p>Computer played: {{ $round['computer'] }}</p>
-<p>Result: {{ $round['result'] }}</p>
-<p>Time: {{ $round['time'] }}</p>
 
+</div>
 @endsection

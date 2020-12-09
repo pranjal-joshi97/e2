@@ -3,10 +3,11 @@
 + Production URL: <http://e2p3.pranjaljoshi.me>
 
 ## Outside resources
-- [RPS icon](https://www.vecteezy.com/free-vector/rock-paper-scissors)
+- [Rock Papaer Scissors icon](https://www.vecteezy.com/free-vector/rock-hand)
+- [How to make a link look like a button (code template)](https://stackoverflow.com/questions/710089/how-do-i-make-an-html-link-look-like-a-button)
 
 ## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
+n/a
 
 ## e2framework
 
